@@ -1,0 +1,18 @@
+server:
+  port: 8080
+##
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        register: true
+        healthCheckPath: /health
+        healthCheckInterval: 2s
+        instance-id: order-service
+
+  application:
+    name: order-service
+
+

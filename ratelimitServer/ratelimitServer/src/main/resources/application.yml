@@ -1,0 +1,16 @@
+server:
+  port: 9998
+
+
+spring:
+  application:
+    name: ratelimit-server
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        register: true
+        healthCheckPath: /health
+        healthCheckInterval: 2s
+        instance-id: ratelimit-server
